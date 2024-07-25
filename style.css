@@ -1,0 +1,465 @@
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #109de4;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: #000;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #0093D4;
+
+}
+
+/*ESTILO CABEÇARIO*/
+
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #202020;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #3d40ec;
+    transform: scale(1.05);
+}
+
+
+header nav ul {
+    list-style: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+
+}
+
+
+.btn-contato button:hover {
+    box-shadow: 0px 0px 8px #109de436;
+    transform: scale(1.05);
+}
+
+/* estilo menu mobile*/
+.btn-abrir-menu i{
+    color: #25049e;
+    font-size: 40px;
+}
+@media screen and (min-width: 1020px) {
+    .btn-abrir-menu{
+        display: none;
+    }
+    
+}
+.menu-mobile{
+    background-color:#109de4;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color: #04384e;
+    font-size: 30px;
+
+
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: #04384e;
+}
+.overlay-menu{
+    background-color: #000000ab;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+/*stilo do topo do site*/
+section.topo-do-site {
+    padding: 40px 4%;
+
+}
+
+section.topo-do-site.flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+
+}
+
+.topo-do-site h1 {
+    font-size: 42px;
+}
+
+.topo-do-site h1 span {
+    color: #0093D4;
+    font-size: 60px;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #000;
+    margin: 120px 4px;
+
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+section.especialidades {
+    padding: 40px 4%;
+
+}
+
+section.especialidades flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #000;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: 1.02s;
+
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 20px #0094d465;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #0093D4;
+
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/*estilo mais*/
+section.mais {
+
+    padding: 80px 4%;
+}
+
+section.mais .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.mais .txt-mais {
+    color: #000;
+}
+
+.mais .txt-mais h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.mais .txt-mais h2 span {
+    color: #0093D4;
+}
+
+.mais .txt-mais p {
+    margin: 20px 0;
+    text-align: justify;
+}
+/*estilo mais1*/
+section.mais1 {
+
+    padding: 10% 4%;
+}
+
+section.mais1 .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.mais1 .txt-mais1 {
+    color: #000;
+}
+
+.mais1 .txt-mais1 h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.mais1 .txt-mais1 h2 span {
+    color: #0093D4;
+}
+
+.mais .txt-mais p {
+    margin: 40px 0;
+    text-align: justify;
+}
+/*ESTILO DO PORTIFOLIO*/
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #0094d496;
+}
+
+section.portifolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0004ff4b;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EA455;
+    width: 180px;
+    border-radius: 25px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.whatsapp-button .button-text {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover .button-text {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1020px) {
+
+
+    /*CLASSES GERAIS*/
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+   
+
+    /*CABEÇALHO*/
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    /*topo do saite*/
+    section.topo-do-site.flex {
+
+        gap: 100px;
+
+    }
+
+    section.topo-do-site {
+        padding: 28px 8%;
+
+    }
+
+    .topo-do-site h1 {
+        padding: 25px;
+        font-size: 30px;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        margin: 10px 4px;
+
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /*ESTILO DAS ESPECIALIDADES*/
+    section.especialidades {
+        padding: 40px 8%;
+
+    }
+    /*sesao mais*/
+    section.mais {
+
+        padding: 8px 4%;
+    }
+    .mais .txt-mais h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    /*portifolio*/
+    section.portifolio {
+        padding: 80px 8%;
+        }
+        .img-port {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            
+        }section.portifolio .flex {
+            gap: 60px;
+        }
+    }       
